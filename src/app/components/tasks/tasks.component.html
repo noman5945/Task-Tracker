@@ -1,0 +1,8 @@
+<app-add-task (onAddTask)="addNewTask($event)"></app-add-task>
+@for (task of Tasks; track $index) {
+<app-task-item
+  (btnOnDelete)="deleteTask(task)"
+  (dblClick)="toggleReminder(task)"
+  [task]="task"
+></app-task-item>
+}
